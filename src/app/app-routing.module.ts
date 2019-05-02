@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NavSidebarComponent } from './shared/nav-sidebar/nav-sidebar.component';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -29,11 +30,15 @@ const routes: Routes = [
     {
       path: 'customers',
       loadChildren: './customer-management/customer-management.module#CustomerManagementModule'
+    },    {
+      path: 'order',
+      loadChildren: './order-management/order-management.module#OrderManagementModule'
     }
     /* {
-      path: 'shared',
-      loadChildren: './shared/shared.module#SharedModule'
-    } */]
+      path: 'order',
+      loadChildren: './order-management/order-management.module#OrderManagementModule'
+    } */
+  ]
   }
 ];
 

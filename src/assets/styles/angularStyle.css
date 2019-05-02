@@ -5,10 +5,10 @@
     z-index: 999;
   }
   
-  .mat-select-value {
+  /* .mat-select-value {
     font-weight: 400;
-    /* color: #ffffff; */
-  }
+    color: #ffffff;
+  } */
   
   .mat-menu-item {
     width: 48px;
@@ -19,7 +19,6 @@
   .mat-form-field {
     display: block !important;
     position: relative;
-    text-align: left;
   }
   
   /* .mat-icon{
