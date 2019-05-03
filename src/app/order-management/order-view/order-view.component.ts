@@ -4,6 +4,7 @@ import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 import { Order } from './../order-view/order.model';
 import { MatPaginator, MatTableDataSource , MatSort} from '@angular/material';
 import { MatSnackBar } from '@angular/material';
+import { SingleOrderService } from './../single-order/single-order.service';
 
 @Component({
   selector: 'app-order-view',
@@ -16,7 +17,7 @@ export class OrderViewComponent implements OnInit {
   orderForm: FormGroup;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   constructor(private orderManagementService: OrderManagementService,
-    private fb: FormBuilder, private snackBar: MatSnackBar) { }
+    private fb: FormBuilder, private snackBar: MatSnackBar, private singleOrderService: SingleOrderService) { }
   status = ['New', 'Processing', 'OnHold', 'Completed', 'Cancelled', 'Failed'];
   displayedColumns: string[] = ['order', 'date', 'status', 'total', 'view'];
 
@@ -36,6 +37,9 @@ export class OrderViewComponent implements OnInit {
   }
   applyFilter(filterValue: string) {
     this.order.filter = filterValue.trim().toLowerCase();
+  }
+  viewSingleOrder(element) {
+    this.singleOrderService.openAddress(element);
   }
 
   orderStatusUpdate(e, id)  {

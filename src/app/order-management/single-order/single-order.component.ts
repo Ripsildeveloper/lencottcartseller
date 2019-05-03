@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Inject, Optional, Input  } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Order } from './../order-view/order.model';
 import { AppSetting } from '../../config/appSetting';
 
@@ -8,9 +9,9 @@ import { AppSetting } from '../../config/appSetting';
   styleUrls: ['./single-order.component.css']
 })
 export class SingleOrderComponent implements OnInit {
-  @Input() order: Order;
   productImageUrl: string = AppSetting.productImageUrl;
-  constructor() { }
+  constructor( @Optional() @Inject(MAT_DIALOG_DATA) public data: any,
+  public dialogRef: MatDialogRef<SingleOrderComponent>) { }
 
   ngOnInit() {
   }

@@ -32,6 +32,7 @@ import {
   MatTableModule
 } from '@angular/material';
 import { SingleOrderComponent } from './single-order/single-order.component';
+import { SingleOrderService } from './single-order/single-order.service';
 
 @NgModule({
   declarations: [OrderViewComponent, SingleOrderComponent],
@@ -65,6 +66,8 @@ import { SingleOrderComponent } from './single-order/single-order.component';
     MatPaginatorModule,
     MatTableModule,
     ReactiveFormsModule
-  ]
+  ],
+  providers: [SingleOrderService],
+  entryComponents: [SingleOrderComponent]
 })
 export class OrderManagementModule { }
