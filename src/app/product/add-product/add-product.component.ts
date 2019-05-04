@@ -442,7 +442,6 @@ export class AddProductComponent implements OnInit {
   subProduct(path, productModel) {
     this.productService.addRegionService(path,
       productModel).subscribe(data => {
-        console.log(data);
         this.snackBar.open(this.message, this.action, {
           duration: 3000,
         });

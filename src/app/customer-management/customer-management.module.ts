@@ -32,8 +32,8 @@ import {
 } from '@angular/material';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { ViewCustomersComponent } from './view-customers/view-customers.component';
-import {CustomerRoutingModule} from './customer-routing.module';
-import {CustomerManagementService} from './customer-management.service';
+import { CustomerRoutingModule } from './customer-routing.module';
+import { CustomerManagementService } from './customer-management.service';
 
 @NgModule({
   declarations: [ViewCustomersComponent],

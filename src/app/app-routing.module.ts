@@ -33,11 +33,15 @@ const routes: Routes = [
     },    {
       path: 'order',
       loadChildren: './order-management/order-management.module#OrderManagementModule'
-    }
-    /* {
+    },
+    {
       path: 'order',
       loadChildren: './order-management/order-management.module#OrderManagementModule'
-    } */
+    },
+    {
+      path: 'inventory',
+      loadChildren: './inventory-management/inventory-management.module#InventoryManagementModule'
+    }
   ]
   }
 ];

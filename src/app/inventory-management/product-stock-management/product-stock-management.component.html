@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-md-12">
+    <table mat-table [dataSource]="productData" matSort class="container-fluid ">
+      <ng-container matColumnDef="primeImage">
+        <th mat-header-cell *matHeaderCellDef>Products
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <a (click)="viewProduct(element)">
+            <img [src]="element.productImageName[0]" style="width: 90px; height: 125px;" /></a> </td>
+      </ng-container>
+      <ng-container matColumnDef="productName">
+
+        <th mat-header-cell *matHeaderCellDef>Product Name
+
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.productName}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="styleCode">
+        <th mat-header-cell *matHeaderCellDef> Style Code<br>
+
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.styleCode}} </td>
+      </ng-container>
+      <ng-container matColumnDef="skuCode">
+        <th mat-header-cell *matHeaderCellDef> SKU Code<br>
+
+        </th>
+        <td mat-cell *matCellDef="let element"> {{element.skuCode}} </td>
+      </ng-container>
+      <ng-container matColumnDef="view">
+        <th mat-header-cell *matHeaderCellDef> Size<br>
+
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <div class="row" *ngFor="let size of element.size">
+              <div class="col-md-12">
+                  <span><b>{{size.sizeName}} :</b></span>
+              </div>
+          </div>
+         </td>
+      </ng-container>
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef> Qty <br>
+        </th>
+        <td mat-cell *matCellDef="let element">
+            <div class="row" *ngFor="let size of element.size">
+                <div class="col-md-12">
+                    <span> {{size.sizeQty}}</span>
+                </div>
+            </div>
+       </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <!-- <mat-paginator [pageSizeOptions]="[5, 10, 25, 50]" showFirstLastButtons></mat-paginator> -->
+  </div>
+</div>
