@@ -3,7 +3,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { AppSetting } from '../config/appSetting';
-
 import {Product} from './add-product/product.model';
 import {MainCategory} from '../category/main-category/mainCategory.model';
 import {SuperCategory} from '../category/super-category/superCategory.model';

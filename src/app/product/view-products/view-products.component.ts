@@ -24,7 +24,8 @@ export class ViewProductsComponent implements OnInit {
   productData;
   message;
   action;
-  constructor(private fb: FormBuilder, private router: Router, private productService: ProductService, private snackBar: MatSnackBar) { }
+  constructor(private fb: FormBuilder, private router: Router,
+     private productService: ProductService, private snackBar: MatSnackBar) { }
 
 
   ngOnInit() {
