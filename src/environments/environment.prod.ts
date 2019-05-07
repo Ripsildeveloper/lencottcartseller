@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  serviceUrl: 'https://benjolb2b.com/sellerservice/',
+  serviceUrl: 'https://benjolb2b.com/adminservice/',
 };

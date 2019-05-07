@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lencott-seller": {
+    "seller-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/lencott-seller",
+            "outputPath": "dist/seller-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,18 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "lencott-seller:build"
+            "browserTarget": "seller-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "lencott-seller:build:production"
+              "browserTarget": "seller-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lencott-seller:build"
+            "browserTarget": "seller-app:build"
           }
         },
         "test": {
@@ -102,7 +102,7 @@
         }
       }
     },
-    "lencott-seller-e2e": {
+    "seller-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -111,11 +111,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "lencott-seller:serve"
+            "devServerTarget": "seller-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "lencott-seller:serve:production"
+              "devServerTarget": "seller-app:serve:production"
             }
           }
         },
@@ -131,5 +131,5 @@
       }
     }
   },
-  "defaultProject": "lencott-seller"
+  "defaultProject": "seller-app"
 }
