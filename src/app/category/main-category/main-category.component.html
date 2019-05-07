@@ -1,4 +1,4 @@
-<div class="pageBoxLg ">
+<div class="pageBoxLg">
   <label class="pageBoxLg-label ">Main Category</label>
   <form [formGroup]="mainCategoryForm" novalidate style="padding-top:60px" >
     <div class="container-fluid">
@@ -85,22 +85,23 @@
 
 
 
-      <div class="col-md-12 mx-auto">
-        <table mat-table [dataSource]="mainCategoryData" class="container-fluid">
+      <div class="col-md-12">
+        <table mat-table [dataSource]="mainCategoryData"
+         class="container-fluid border text-strong">
 
             
           <ng-container matColumnDef="categoryName">
 
-            <th mat-header-cell *matHeaderCellDef class="pageBoxLg-label"> Category Name</th>
+            <th mat-header-cell *matHeaderCellDef> Category Name</th>
             <td mat-cell *matCellDef="let element"> {{element.mainCategoryName }} </td>
           </ng-container>
           <ng-container matColumnDef="description">
-            <th mat-header-cell *matHeaderCellDef class="pageBoxLg-label"> Description</th>
+            <th mat-header-cell *matHeaderCellDef> Description</th>
             <td mat-cell *matCellDef="let element"> {{element.mainCategoryDescription}} </td>
           </ng-container>
 
           <ng-container matColumnDef="delete">
-            <th mat-header-cell *matHeaderCellDef class="pageBoxLg-label"> Delete</th>
+            <th mat-header-cell *matHeaderCellDef> Delete</th>
             <td mat-cell *matCellDef="let element"> <button mat-icon-button mat-sm-button color="primary" (click)="deleteMainCategory(element._id, element.mainCategoryName)">
                 <mat-icon>delete</mat-icon>
               </button></td>

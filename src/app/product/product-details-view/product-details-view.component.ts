@@ -23,7 +23,7 @@ export class ProductDetailsViewComponent implements OnInit {
   regionData: Size;
   message;
   action;
-  mfdQty;
+  
   constructor(private fb: FormBuilder, private router: Router, private productService: ProductService, private snackBar: MatSnackBar,
     private activatedRoute: ActivatedRoute) { }
 
@@ -39,12 +39,12 @@ export class ProductDetailsViewComponent implements OnInit {
       editMfdQty: ['']
     });
   }
-  editQty(elem) {
+  /* editQty(elem) {
     elem.qtyediting = true;
   }
   editMfdQty(data) {
     data.editMfdQty = true;
-  }
+  } */
   update(data, elem, name, price , value) {
     this.message = 'Product updated successfully';
     data.qtyediting = false;
@@ -62,18 +62,17 @@ export class ProductDetailsViewComponent implements OnInit {
   cancel(data) {
     data.qtyediting = false;
   }
-  cancelMfdQty(data) {
+  /* cancelMfdQty(data) {
     data.editMfdQty = false;
-  }
-  updateMfdQty(product, val) {
+  } */
+  /* updateMfdQty(product, val) {
     this.message = 'Manufactured Quantity updated successfully';
     this.productData = new Product();
-    this.productData.mfdQty = val.value;
     this.productService.editQtyDetails(product._id, this.productData ).subscribe(data => {
       this.productModel = data;
       this.snackBar.open(this.message, this.action, {
         duration: 3000,
       });
     });
-  }
+  } */
 }

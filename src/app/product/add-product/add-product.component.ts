@@ -416,7 +416,7 @@ export class AddProductComponent implements OnInit {
     this.productModel.productDescription = this.productForm.controls.productDescription.value;
     this.productModel.price = this.productForm.controls.price.value;
     this.productModel.color = this.productForm.controls.color.value;
-    this.productModel.mfdQty = this.productForm.controls.mfdQty.value;
+    /* this.productModel.mfdQty = this.productForm.controls.mfdQty.value; */
     this.productModel.styleCode = this.productForm.controls.styleCode.value.toUpperCase();
     this.productModel.skuCode = this.productForm.controls.skuCode.value.toUpperCase();
     this.productModel.superCategoryId = this.supCategoryId;

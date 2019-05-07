@@ -20,7 +20,7 @@ export class Product {
     spPrice: String;
     mrpPrice: String;
     moq: Number;
-    mfdQty: Number;
+    /* mfdQty: Number; */
     mfdQtyEditing: Boolean;
     // details
     material: string;
