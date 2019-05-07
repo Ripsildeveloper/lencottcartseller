@@ -53,6 +53,7 @@ export class OrderViewComponent implements OnInit {
         duration: 3000,
       });
      /*  this.router.navigate(['orders/vieworders']); */
+     console.log(this.order);
     }, err => {
       console.log(err);
     });
